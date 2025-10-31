@@ -1,0 +1,2 @@
+networkx
+sqlite3   # built-in for Python; omit if you use only built-ins

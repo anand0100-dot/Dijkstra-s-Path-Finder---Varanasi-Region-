@@ -1,0 +1,11 @@
+import csv
+from event import Event
+
+def load_events_from_csv(filename="sample_events.csv"):
+    events = []
+    with open(filename, newline='') as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+            events.append(Event(row['name'], row['start_time'], row['end_time']))
+    return events
+    
